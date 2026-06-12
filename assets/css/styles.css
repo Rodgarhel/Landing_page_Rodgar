@@ -98,7 +98,7 @@ header {
         padding: 2rem;
         background-color: #0c0d0f;
         
-        video{max-height:240px; min-height: 150px; width: auto; border-radius: 100%;}
+        video{height:160px; width: auto; border-radius: 100%;}
     }
 
 
@@ -230,6 +230,11 @@ grid-area: gallery;
     padding-top: 0;
     margin-top: 0;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .turntable video{
+    max-height:260px;
+    height:auto;    
+    max-width: 30%;
   }
  
 }
