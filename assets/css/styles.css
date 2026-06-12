@@ -15,11 +15,12 @@
     height: 100dvh;  
 
     display: grid;
-    grid-template-rows: 60px auto 120px 1fr auto;
+    grid-template-rows: 60px auto auto 120px 1fr auto;
     grid-template-columns: 1fr;
     grid-template-areas: 
         "header header"
         "hero hero"
+        "turn turn"
         "menus menus"
         "gallery gallery"
         "footer footer";
@@ -87,6 +88,18 @@ header {
         font-size:small;
                 
     }
+    .turntable{
+        grid-area: turn;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-inline: 3rem;
+        padding: 2rem;
+        background-color: #0c0d0f;
+        
+        video{max-height:240px; min-height: 150px; width: auto; border-radius: 100%;}
+    }
 
 
 /* Main */
@@ -106,6 +119,7 @@ header {
             background-color: #0C6A6E;
         }       
 }
+
 .menu button {
     padding: 3px ;
     background-color: #2a2e29;
@@ -147,6 +161,8 @@ grid-area: gallery;
     justify-content: space-between;
     flex-direction: column;
     overflow: hidden;    
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
     
     img:hover {
          transform: scale(2); 
@@ -193,6 +209,7 @@ grid-area: gallery;
   grid-template-areas: 
         "header header"
         "hero hero"
+        "turn turn"
         "menus gallery"
         "footer footer";
   }
@@ -206,8 +223,7 @@ grid-area: gallery;
   .footer{
     font-size: 14px;
   }
-  .hero{
-    margin-bottom: 2rem;
+  .hero{   
     background-position-y: -20vw;
   }
   .gallery{
